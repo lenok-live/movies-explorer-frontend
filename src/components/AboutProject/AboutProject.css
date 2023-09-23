@@ -1,0 +1,143 @@
+.about-project {
+  background-color: #202020;
+  color: #fff;
+  margin: 0 auto;
+	padding: 110px 70px;
+}
+
+.about-project__heading {
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.88px;
+  border-bottom: 1px solid #DADADA;
+  padding-bottom: 23px;
+}
+
+.about-project__text {
+	display: flex;
+	justify-content: space-between;
+	padding: 70px 0 110px 0;
+  gap: 40px;
+  padding-bottom: 93px;
+}
+
+.about-project__title {
+	margin: 0;
+	padding: 0 0 26px 0;
+	font-size: 20px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	letter-spacing: -0.8px;
+}
+
+.about-project__description {
+	margin: 0;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 20px;
+}
+
+.about-project__graphic {
+	display: grid;
+	width: 100%;
+  /* Будет создано 2 колонки */
+  grid-template-columns: 228px auto;
+  /* Будет создано 2 ряда */
+  grid-template-rows: 36px 36px;
+  gap: 5px 0px;
+}
+
+.about-project__development {
+  margin: 0;
+  display: flex;
+	align-items: center;
+	justify-content: center;
+  color: #8B8B8B;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 17px;
+}
+
+.about-project__development:first-child {
+  background-color: #3DDC84;
+  color: #000;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.about-project__development:nth-child(2) {
+  background-color: #303030;
+  color: #fff;
+  font-weight: 400;
+  line-height: normal;
+}
+
+
+/* @media screen and (max-width: 1139px) {
+	.about-project {
+    padding: 90px 50px;
+	}
+
+	.about-project__description {
+		margin: 0;
+		font-size: 12px;
+		line-height: 18px;
+	}
+
+	.about-project__title {
+		margin: 0;
+		padding: 0 0 22px 0;
+	}
+
+
+	.about-project__graphic {
+		width: 21%;
+	}
+} */
+
+/* @media screen and (max-width: 767px) {
+	.about-project {
+    padding: 70px 18px;
+	}
+
+	.about-project__text-cover {
+		padding: 60px 0;
+		flex-direction: column;
+    align-items: center;
+    gap: 58px;
+	}
+
+	.about-project__description {
+		font-size: 11px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 16px;
+	 }
+
+	.about-project__title {
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		letter-spacing: -0.72px;
+		padding-bottom: 16px;
+	}
+
+	.about-project__illustration-back {
+		width: 36%;
+	}
+
+	.about-project__timeline-item-course {
+		font-size: 11px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: normal;
+		padding-top: 10px;
+	}
+} */

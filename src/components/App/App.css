@@ -1,0 +1,13 @@
+@import url(../../vendor/normalize.css);
+@import url(../../vendor/fonts/fonts.css);
+
+.page {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1280px;
+  min-width: 320px;
+  min-height: 100vh;
+  margin: 0 auto;
+  font-family: 'Inter', Helvetica, Arial, sans-serif;
+}
