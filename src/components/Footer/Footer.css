@@ -1,6 +1,6 @@
 .footer {
   margin: 0;
-  padding: 79px 70px 0;
+  padding: 79px 70px 20px;
   background-color: #202020;
 }
 
@@ -20,7 +20,7 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px 0;
+  padding-top: 20px;
 }
 
 .footer__container-link {
@@ -38,7 +38,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
-  margin: 0}
+  margin: 0;
+  transition: .1s ease-in;
+}
 
 .footer__link:hover {
   opacity: .6;

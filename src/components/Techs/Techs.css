@@ -4,19 +4,17 @@
 }
 
 .techs__title {
-  color: #FFF;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.88px;
   border-bottom: 1px solid #DADADA;
-  padding-bottom: 30px;
+  padding-bottom: 23px;
   margin: 0;
 }
 
 .techs__subtitle {
-  color: #FFF;
   text-align: center;
   font-size: 50px;
   font-style: normal;
@@ -28,7 +26,7 @@
 
 .techs__description {
   max-width: 460px;
-  color: #FFF;
+  width: 100%;
   text-align: center;
   font-size: 14px;
   font-style: normal;
@@ -50,7 +48,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #FFF;
+  color: #fff;
   text-align: center;
   font-size: 14px;
   font-style: normal;
@@ -64,7 +62,7 @@
   transition: .1s ease;
 }
 
-.techs__cell:hover {
+.techs__skill:hover {
  opacity: .6;
 }
 

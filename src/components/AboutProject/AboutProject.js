@@ -4,7 +4,7 @@ export default function AboutProject() {
   return (
     <section className="about-project" id="about-project">
       <h2 className="about-project__heading">О проекте</h2>
-      <div className="about-project__text">
+      <div className="about-project__table">
         <div className="about-project__wrapper">
           <h3 className="about-project__title">
             Дипломный проект включал 5 этапов

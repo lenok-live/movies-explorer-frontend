@@ -9,7 +9,7 @@ export default function Portfolio() {
         href="https://github.com/lenok-live/how-to-learn"
         title="Статический сайт"
         className="portfolio__link"
-        target='_blank'
+        target="_blank"
         rel="noreferrer"
       >
         Статический сайт
@@ -18,7 +18,7 @@ export default function Portfolio() {
         href="https://lenok-live.github.io/russian-travel"
         title="Адаптивный сайт"
         className="portfolio__link"
-        target='_blank'
+        target="_blank"
         rel="noreferrer"
       >
         Адаптивный сайт
@@ -27,7 +27,7 @@ export default function Portfolio() {
         href="https://mesto.sultanova.nomoreparties.co"
         title="Одностраничное приложение"
         className="portfolio__link"
-        target='_blank'
+        target="_blank"
         rel="noreferrer"
       >
         Одностраничное приложение

@@ -8,9 +8,14 @@ import Login from "../Login/Login";
 import Register from "../Register/Register";
 import Main from "../Main/Main";
 import PageNotFound from "../PageNotFound/PageNotFound";
-import Footer from "../Footer/Footer";
 
 export default function App() {
+  // const [isHamburger, setIsHamburger] = useState(false);
+
+  // function onHandleHamburger() {
+  //   setIsHamburger(!isHamburger);
+  // }
+
   return (
     <div className="page">
 

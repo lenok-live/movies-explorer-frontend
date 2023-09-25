@@ -1,5 +1,5 @@
 .about-me {
-  padding: 110px 70px 125px;
+  padding: 110px 70px 101px;
   background-color: #202020;
   color: #fff;
 }
@@ -50,8 +50,9 @@
 .about-me__links {
   list-style: none;
   display: flex;
-  margin: 90px 0 0;
+  margin: 99px 0 0;
   padding: 0;
+  gap: 20px;
 }
 
 .about-me__link {
@@ -62,7 +63,6 @@
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  margin-right: 15px;
   transition: opacity .2s linear;
 }
 
