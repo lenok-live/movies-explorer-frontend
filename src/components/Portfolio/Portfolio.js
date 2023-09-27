@@ -24,7 +24,7 @@ export default function Portfolio() {
         Адаптивный сайт
       </a>
       <a
-        href="https://mesto.sultanova.nomoreparties.co"
+        href="https://github.com/lenok-live/react-mesto-api-full-gha"
         title="Одностраничное приложение"
         className="portfolio__link"
         target="_blank"

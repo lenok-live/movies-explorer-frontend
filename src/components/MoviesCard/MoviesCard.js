@@ -38,18 +38,18 @@ export default function MoviesCard({ name, duration, thumbnail }) {
 
       {pathname === '/saved-movies' ? (
         <button
-          className='movies-card__button movies-card__button_type_delete'
+          className='movie-card__button movie-card__button_type_delete'
           type='button'
         />
       ) : !isSaved ? (
         <button
-          className='movies-card__button'
+          className='movie-card__button'
           type='button'
           onClick={handleToggleButton}
         ></button>
       ) : (
         <button
-          className='movies-card__button movies-card__button_type_saved'
+          className='movie-card__button movie-card__button_type_saved'
           type='button'
           onClick={handleToggleButton}
         />

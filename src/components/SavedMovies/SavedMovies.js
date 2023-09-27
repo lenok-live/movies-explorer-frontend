@@ -12,7 +12,7 @@ export default function SavedMovies() {
       <main>
         <SearchForm />
         <MoviesCardList type="saved" />
-        <div className='saved-movies__empty-space' />
+        <div className='saved-movies-empty-space' />
       </main>
       <Footer />
     </>

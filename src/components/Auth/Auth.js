@@ -1,5 +1,6 @@
 import "./Auth.css";
 import logo from "../../images/logo.svg";
+// import Logo from "../Logo/Logo"
 import { Link } from "react-router-dom";
 
 export default function Auth({ mode = "register", children, onClick }) {
@@ -36,6 +37,7 @@ export default function Auth({ mode = "register", children, onClick }) {
         <Link className="auth__logo-link" to="/">
           <img className="header__logo" alt="Логотип приложения" src={logo} />
         </Link>
+
         <h1 className="auth__title">{MODES[mode].title}</h1>
         <form className="auth__form">
           {children}

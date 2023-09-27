@@ -1,7 +1,7 @@
 import "./Header.css";
 import React from "react";
 import { Link } from "react-router-dom";
-import headerLogo from "../../images/logo.svg";
+import Logo from "../Logo/Logo"
 import Navigation from "../Navigation/Navigation";
 // import NavigationMobile from "../NavigationMobile/NavigationMobile";
 import Hamburger from "../Hamburger/Hamburger";
@@ -18,9 +18,7 @@ export default function Header(props) {
         />
       ) : null} */}
       <header className="header">
-        <a aria-current="page" href="/">
-          <img className="header__logo" src={headerLogo} alt="Логотип" />
-        </a>
+        <Logo />
         {loggedIn ? (
           <>
             {/* <Hamburger onHandleHamburger={onHandleHamburger} /> */}
