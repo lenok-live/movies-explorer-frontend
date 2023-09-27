@@ -4,12 +4,20 @@
 .page {
   display: flex;
   flex-direction: column;
-  width: 100%;
   max-width: 1280px;
   min-width: 320px;
+  width: 100%;
   min-height: 100vh;
   margin: 0 auto;
   font-family: 'Inter', Helvetica, Arial, sans-serif;
   background-color: #202020;
-  color: #FFF;;
+  color: #FFF;
+}
+
+a, button {
+  transition: opacity 0.3s;
+}
+
+a:hover, button:hover {
+  opacity: 0.7;
 }

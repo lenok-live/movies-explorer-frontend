@@ -1,17 +1,13 @@
-import './Hamburger.css';
+// Hamburger - компонент отображения бургер-меню в Header
+import "./Hamburger.css";
 
 export default function Hamburger(props) {
   //  const {
   //      onHandleHamburger,
   //  } = props;
-   const onHandleHamburger = true;
+  const onHandleHamburger = true;
 
-    return (
-        <button
-            className='hamburger'
-            onClick={onHandleHamburger}
-        >
-            <span></span>
-        </button>
-    );
+  return (
+    <button className="hamburger" onClick={onHandleHamburger} />
+  );
 }

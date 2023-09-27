@@ -30,8 +30,11 @@ export default function MoviesCard({ name, duration, thumbnail }) {
         alt={`Кадр из фильма ${name}`}
         className='movie-card__thumbnail'
       />
-      <h2 className='movie-card__name'>{name}</h2>
-      <span className='movie-card__duration'>{countTime(duration)}</span>
+      <div className='movie-card__wrapper'>
+        <h2 className='movie-card__name'>{name}</h2>
+        <span className='movie-card__duration'>{countTime(duration)}</span>
+      </div>
+
 
       {pathname === '/saved-movies' ? (
         <button

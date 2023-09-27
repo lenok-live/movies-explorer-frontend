@@ -13,10 +13,7 @@ export default function SearchForm() {
         />
         <button type='submit' className='search-form__button' />
       </div>
-      <FilterCheckbox
-        title='Короткометражки'
-        className='search-form__checkbox'
-      />
+      <FilterCheckbox />
     </form>
   );
 }

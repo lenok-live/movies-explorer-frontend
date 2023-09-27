@@ -81,66 +81,77 @@
   line-height: normal;
 }
 
-
-/* @media screen and (max-width: 1139px) {
-	.about-project {
+/* 768px - 1279px */
+@media screen and (max-width: 1279px) {
+  .about-project {
     padding: 90px 50px;
-	}
+  }
 
-	.about-project__description {
-		margin: 0;
-		font-size: 12px;
-		line-height: 18px;
-	}
+  .about-project__table {
+    gap: 30px;
+    padding: 70px 0 93px 0;
+  }
 
-	.about-project__title {
-		margin: 0;
-		padding: 0 0 22px 0;
-	}
+  .about-project__wrapper {
+    gap: 22px;
+  }
 
+  .about-project__description {
+    font-size: 12px;
+    line-height: 18px;
+  }
 
-	.about-project__graphic {
-		width: 21%;
-	}
-} */
+  .about-project__graphic {
+    /* Будет создано 2 колонки */
+    grid-template-columns: 140px auto;
+  }
 
-/* @media screen and (max-width: 767px) {
-	.about-project {
-    padding: 70px 18px;
-	}
+  .about-project__development {
+    font-weight: 400;
+  }
+}
 
-	.about-project__text-cover {
-		padding: 60px 0;
-		flex-direction: column;
-    align-items: center;
-    gap: 58px;
-	}
+/* 320px - 767px */
+@media screen and (max-width: 767px) {
+  .about-project {
+    padding: 70px 18px 69px;
+  }
 
-	.about-project__description {
-		font-size: 11px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: 16px;
-	 }
+  .about-project__heading {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+    padding-bottom: 28px;
+    margin: 0;
+  }
 
-	.about-project__title {
-		font-size: 18px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
-		letter-spacing: -0.72px;
-		padding-bottom: 16px;
-	}
+  .about-project__table {
+    display: flex;
+    flex-direction: column;
+    padding: 120px 0 60px 0;
+    gap: 56px;
+  }
 
-	.about-project__illustration-back {
-		width: 36%;
-	}
+  .about-project__wrapper {
+    gap: 16px;
+  }
 
-	.about-project__timeline-item-course {
-		font-size: 11px;
-		font-style: normal;
-		font-weight: 400;
-		line-height: normal;
-		padding-top: 10px;
-	}
-} */
+  .about-project__title {
+    font-size: 18px;
+    letter-spacing: -0.72px;
+  }
+
+  .about-project__description {
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .about-project__graphic {
+    /* Будет создано 2 колонки */
+    grid-template-columns: 100px auto;
+  }
+
+  .about-project__development {
+    font-size: 11px;
+    line-height: normal;
+  }
+}

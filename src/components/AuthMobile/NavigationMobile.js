@@ -1,7 +1,7 @@
 import './AuthMobile.css';
 import { NavLink} from "react-router-dom";
 
-export default function AuthMobile(props) {
+export default function NavigationMobile(props) {
     const {
         hamburger,
         onHandleHamburger,

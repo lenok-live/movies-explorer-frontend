@@ -1,4 +1,21 @@
 .hamburger {
+  display: none;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: url(../../images/burger-menu.svg) no-repeat center/cover;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1279px) {
+  .hamburger {
+    display: block;
+  }
+}
+
+
+/* .hamburger {
   width: 24px;
   height: 24px;
   background-color: transparent;
@@ -31,4 +48,4 @@
   .hamburger {
       display: none;
   }
-}
+} */

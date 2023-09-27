@@ -1,5 +1,5 @@
 .more {
-  padding: 50px 70px 80px;
+  padding: 50px 0 80px;
   display: flex;
   justify-content: center;
   background: #202020;
@@ -7,11 +7,11 @@
 
 .more__button {
   display: block;
-  min-width: 240px;
+  max-width: 320px;
   width: 100%;
-  min-height: 36px;
+  padding: 11px 0 9px;
   border-radius: 6px;
-  border: none;
+  border: 1px solid #424242;
   cursor: pointer;
   background-color: #2F2F2F;
   color: #FFF;
@@ -23,16 +23,20 @@
   transition: opacity .3s, transform .3s;
 }
 
-/* @media (min-width: 768px) {
-  .more__button {
-    min-width: 320px;
-  }
-} */
-
 .more__button:active {
   transform: scale(0.9);
 }
 
 .more__button:hover {
   opacity: 0.8;
+}
+
+/* 768px - 1279px */
+@media screen and (max-width: 1279px) {}
+
+/* 320px - 767px */
+@media screen and (max-width: 767px) {
+  .more__button {
+    max-width: 240px;
+  }
 }

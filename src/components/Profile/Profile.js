@@ -1,5 +1,6 @@
-import React from 'react';
-import './Profile.css';
+import "./Profile.css";
+import React from "react";
+import Header from "../Header/Header";
 
 export default function Profile() {
   const [isInEditMode, setIsInEditMode] = React.useState(true);
@@ -10,60 +11,57 @@ export default function Profile() {
   }
 
   return (
-    <main className="profile">
-      <div className="profile__container">
-        <h1 className="profile__title">Привет, Студент!</h1>
-        <form className="profile__form">
-          <label className="profile__input-container">
-            <span className="profile__input-label">Имя</span>
-            <input
-              type="text"
-              className="profile__input"
-              name="name"
-              minLength="2"
-              maxLength="30"
-              required={true}
-              placeholder="Лена"
-              {...(!isInEditMode ? { disabled: true } : {})}
-            />
-          </label>
-          <label className="profile__input-container">
-            <span className="profile__input-label">E-mail</span>
-            <input
-              type="email"
-              className="profile__input"
-              name="email"
-              required={true}
-              placeholder="example@example.com"
-              {...(!isInEditMode ? { disabled: true } : {})}
-            />
-          </label>
+    <>
+      <Header />
+      <main className="profile">
+        <div className="profile__container">
+          <h1 className="profile__title">Привет, Студент!</h1>
 
-          {isInEditMode && (
-            <>
-              <button className="profile__edit"  onClick={switchEditMode}>
+          <form className="profile__form">
+            <label className="profile__input-container">
+              <span className="profile__input-span">Имя</span>
+              <input
+                type="text"
+                className="profile__input"
+                name="name"
+                minLength="2"
+                maxLength="30"
+                required={true}
+                placeholder="Лена"
+                {...(!isInEditMode ? { disabled: true } : {})}
+              />
+            </label>
+            <label className="profile__input-container">
+              <span className="profile__input-span">E-mail</span>
+              <input
+                type="email"
+                className="profile__input"
+                name="email"
+                required={true}
+                placeholder="example@example.com"
+                {...(!isInEditMode ? { disabled: true } : {})}
+              />
+            </label>
+
+            <button className="profile__button-edit" onClick={switchEditMode}>
               Редактировать
-              </button>
-              <button className="submit-button">Выйти из аккаунта</button>
-            </>
-          )}
-        </form>
+            </button>
 
-        {!isInEditMode && (
-          <ul className="profile__links">
-            <li className="profile__links-item">
-              <button className="profile__link" onClick={switchEditMode}>
-                Редактировать
-              </button>
-            </li>
-            <li className="profile__links-item">
-              <button className="profile__link profile__link_type_logout">
-                Выйти из аккаунта
-              </button>
-            </li>
-          </ul>
-        )}
-      </div>
-    </main>
+            <button className="profile__button-exit">
+              Выйти из аккаунта
+            </button>
+
+            {/* {isInEditMode && (
+              <>
+                <p className="profile__error-message">
+                  При обновлении профиля произошла ошибка.
+                </p>
+                <button title="Сохранить" onClick={switchEditMode}>Сохранить</
+              </>
+            )} */}
+          </form>
+        </div>
+      </main>
+    </>
   );
 }
