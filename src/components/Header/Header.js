@@ -5,9 +5,13 @@ import Logo from "../Logo/Logo"
 import Navigation from "../Navigation/Navigation";
 // import NavigationMobile from "../NavigationMobile/NavigationMobile";
 import Hamburger from "../Hamburger/Hamburger";
+import ProfileLink from "../ProfileLink/ProfileLink";
 
 export default function Header(props) {
   const loggedIn = true;
+//   const {
+//     onHandleHamburger,
+// } = props;
 
   return (
     <>
@@ -17,16 +21,14 @@ export default function Header(props) {
           onHandleHamburger={onHandleHamburger}
         />
       ) : null} */}
-      <header className="header">
+      <header className="header" title="header">
         <Logo />
         {loggedIn ? (
           <>
-            {/* <Hamburger onHandleHamburger={onHandleHamburger} /> */}
+            {/* <Hamburger /> */}
             <div className='header__wrapper'>
             <Navigation />
-            <Link to="/profile" className="header__link" title="Аккаунт">
-              Аккаунт
-            </Link>
+            <ProfileLink />
             </div>
             <Hamburger />
             {/* <Link className="header__burger-menu">

@@ -62,10 +62,10 @@
   }
 }
 
-/* 320px - 767px */
-@media screen and (max-width: 767px) {
+/* 320px - 768px */
+@media screen and (max-width: 768px) {
   .footer {
-    padding: 79px 10px 20px;
+    padding: 60px 10px 20px;
   }
 
   .footer__title {

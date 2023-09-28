@@ -3,7 +3,7 @@
   align-items: center;
   column-gap: 12px;
   justify-content: center;
-  margin-top: 28px;
+  margin-top: 26px;
   border-bottom: 1px solid #424242;
   padding-bottom: 39px;
   transition: opacity 0.3s;
@@ -27,14 +27,16 @@
 
 .filter-checkbox__signature {
   color: #fff;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 18px;
   display: inline-block;
   position: relative;
   padding: 0px;
   padding-left: 50px;
+  text-align: center;
+  cursor: pointer;
 }
 
 .filter-checkbox__signature:before {
@@ -44,7 +46,7 @@
   left: 0;
   top: 0;
   width: 36px;
-  height: 20px;
+  height: 14px;
   border-radius: 18px;
   background-color: #ebebeb;
   transition: background-color .3s;
@@ -54,10 +56,10 @@
   display: block;
   content: "";
   position: absolute;
-  width: 16px;
-  height: 16px;
-  border-radius: 15px;
-  background-color: #f5f5f5;
+  width: 11px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #fff;
   left: 2px;
   top: 2px;
   transition: background-color .3s, ease-in .3s;
@@ -69,14 +71,14 @@
 
 .filter-checkbox__input:checked+.filter-checkbox__signature::after {
   background-color: white;
-  left: 18px;
+  left: 21px;
 }
 
 /* 768px - 1279px */
 @media screen and (max-width: 1279px) {
   .filter-checkbox {
     margin-top: 41px;
-    padding-bottom: 40px;
+    padding-bottom: 38px;
   }
 
   .filter-checkbox__signature {
@@ -85,8 +87,8 @@
   }
 }
 
-/* 320px - 767px */
-@media screen and (max-width: 767px) {
+/* 320px - 768px */
+@media screen and (max-width: 768px) {
   .filter-checkbox {
     margin-top: 46px;
     padding-bottom: 40px;

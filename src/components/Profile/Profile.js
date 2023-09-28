@@ -1,5 +1,6 @@
 import "./Profile.css";
 import React from "react";
+import { Link } from "react-router-dom";
 import Header from "../Header/Header";
 
 export default function Profile() {
@@ -13,7 +14,7 @@ export default function Profile() {
   return (
     <>
       <Header />
-      <main className="profile">
+      <section className="profile">
         <div className="profile__container">
           <h1 className="profile__title">Привет, Студент!</h1>
 
@@ -43,25 +44,24 @@ export default function Profile() {
               />
             </label>
 
-            <button className="profile__button-edit" onClick={switchEditMode}>
+            <button type="submit" className="profile__button-edit" onClick={switchEditMode}>
               Редактировать
             </button>
 
-            <button className="profile__button-exit">
+            <Link to="/" className="profile__button-exit">
               Выйти из аккаунта
-            </button>
+            </Link>
 
             {/* {isInEditMode && (
               <>
                 <p className="profile__error-message">
                   При обновлении профиля произошла ошибка.
                 </p>
-                <button title="Сохранить" onClick={switchEditMode}>Сохранить</
               </>
             )} */}
           </form>
         </div>
-      </main>
+      </section>
     </>
   );
 }

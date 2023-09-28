@@ -9,64 +9,67 @@ export default function Techs() {
         На курсе веб-разработки мы освоили технологии, которые применили в
         дипломном проекте.
       </p>
-      <div className="techs__list">
-        <a
-          href="https://htmlbook.ru/html"
-          title="webref.ru/html"
-          className="techs__skill"
-          target="_ blank"
-        >
-          HTML
-        </a>
-        <a
-          href="https://developer.mozilla.org/ru/docs/Web/CSS"
-          title="webref.ru/css"
-          className="techs__skill"
-          target="_ blank"
-        >
-          CSS
-        </a>
-        <a
-          href="https://learn.javascript.ru"
-          title="learn.javascript.ru"
-          className="techs__skill"
-          target="_ blank"
-        >
-          JS
-        </a>
-        <a
-          href="https://ru.legacy.reactjs.org/"
-          title="ru.reactjs.org"
-          className="techs__skill"
-          target="_ blank"
-        >
-          React
-        </a>
-        <a
-          href="https://git-scm.com"
-          title="git-scm.com"
-          className="techs__skill"
-          target="_ blank"
-        >
-          Git
-        </a>
-        <a
-          href="https://expressjs.com"
-          title="expressjs.com"
-          className="techs__skill"
-          target="_ blank"
-        >
-          Express.js
-        </a>
-        <a
-          href="https://www.mongodb.com"
-          title="mongodb.com"
-          className="techs__skill"
-          target="_ blank"
-        >
-          mongoDB
-        </a>
-      </div>
+      <ul className="techs__list">
+        <li className="techs__skill">
+          <a
+            href="https://htmlbook.ru/html"
+            title="webref.ru/html"
+            target="blank"
+          >
+            HTML
+          </a>
+        </li>
+        <li className="techs__skill">
+          <a
+            href="https://developer.mozilla.org/ru/docs/Web/CSS"
+            title="webref.ru/css"
+            target="blank"
+          >
+            CSS
+          </a>
+        </li>
+        <li className="techs__skill">
+          <a
+            href="https://learn.javascript.ru"
+            title="learn.javascript.ru"
+            target="blank"
+          >
+            JS
+          </a>
+        </li>
+        <li className="techs__skill">
+          <a
+            href="https://ru.legacy.reactjs.org/"
+            title="ru.reactjs.org"
+            target="blank"
+          >
+            React
+          </a>
+        </li>
+        <li className="techs__skill">
+          <a href="https://git-scm.com" title="git-scm.com" target="blank">
+            Git
+          </a>
+        </li>
+        <li className="techs__skill">
+          <a
+            href="https://expressjs.com"
+            title="expressjs.com"
+            target="blank"
+          >
+            Express.js
+          </a>
+        </li>
+        <li className="techs__skill">
+          <a
+            href="https://www.mongodb.com"
+            title="mongodb.com"
+            target="blank"
+          >
+            mongoDB
+          </a>
+        </li>
+      </ul>
     </section>
   );
 }

@@ -8,7 +8,7 @@
   width: 100%;
   background-color: #272727;
   border-radius: 10px;
-  margin-top: 20px;
+  margin-top: 18px;
   padding: 160px 0 30px;
 }
 
@@ -29,7 +29,7 @@
   .promo__container {
     /* max-width: 728px; */
     padding: 350px 0 30px;
-    margin: 0 20px;
+    margin: 20px 20px;
   }
 
   .promo__title {
@@ -41,13 +41,12 @@
   }
 }
 
-/* 320px - 767px */
-@media screen and (max-width: 767px) {
+/* 320px - 768px */
+@media screen and (max-width: 768px) {
   .promo__container {
     /* max-width: 292px; */
-    margin-top: 14px;
     padding: 220px 0 17px;
-    margin: 0 14px;
+    margin: 14px 14px;
   }
 
   .promo__title {

@@ -12,7 +12,7 @@ export default function Portfolio() {
         target="_blank"
         rel="noreferrer"
       >
-        Статический сайт
+        Статичный сайт
       </a>
       <a
         href="https://lenok-live.github.io/russian-travel"

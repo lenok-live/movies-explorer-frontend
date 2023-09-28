@@ -9,6 +9,7 @@ export default function AuthInputForPassword() {
         name: 'password',
         required: true,
         placeholder: 'Введите пароль',
+        minlength: '8',
       }}
     />
   );

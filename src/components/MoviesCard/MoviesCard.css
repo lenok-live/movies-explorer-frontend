@@ -1,7 +1,7 @@
 .movie-card {
   display: block;
   position: relative;
-  /* max-width: 360px; */
+  max-width: 360px;
   width: 100%;
   border-radius: 6px;
   align-items: center;
@@ -11,12 +11,13 @@
   width: 100%;
   object-fit: cover;
   object-position: center;
+  border-radius: 8px;
 }
 
 .movie-card__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 14px 14px 0 14px;
+  padding: 10px 14px 0 14px;
 }
 
 .movie-card__name {
@@ -86,14 +87,18 @@
 /* 768px - 1279px */
 @media screen and (max-width: 1279px) {
   .movie-card__wrapper {
-    padding: 25px 0 0 0;
+    padding: 23px 0 0 0;
+  }
+
+  .movie-card__duration {
+    line-height: 10px;
   }
 }
 
-/* 320px - 767px */
-@media screen and (max-width: 767px) {
+/* 320px - 768px */
+@media screen and (max-width: 768px) {
   .movie-card__wrapper {
-    padding: 16px 0 0 0;
+    padding: 12px 0 0 0;
   }
 
   .movie-card__name {
@@ -105,4 +110,5 @@
     top: 10px;
     right: 10px;
   }
+
 }

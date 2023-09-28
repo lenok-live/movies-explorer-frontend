@@ -19,7 +19,7 @@
   margin: 5px auto 184px;
   padding: 0;
   text-align: center;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
@@ -46,7 +46,7 @@
 /* 768px - 1279px */
 @media screen and (max-width: 1279px) {
   .page-not-found {
-    padding: 408px auto 222px;
+    padding: 408px 0;
   }
 
   .page-not-found__description {
@@ -54,8 +54,8 @@
   }
 }
 
-/* 320px - 767px */
-@media screen and (max-width: 767px) {
+/* 320px - 768px */
+@media screen and (max-width: 768px) {
   .page-not-found {
     padding: 329px 10px 30px;
   }

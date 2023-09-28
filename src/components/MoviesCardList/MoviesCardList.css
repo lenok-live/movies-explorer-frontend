@@ -4,7 +4,7 @@
   padding: 70px 70px 28px 70px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(364px, 1fr));
-  gap: 60px 24px;
+  gap: 53px 24px;
   background-color: #202020;
 }
 
@@ -12,15 +12,13 @@
 @media screen and (max-width: 1279px) {
   .movie-card-list {
     padding: 70px 30px 12px 30px;
-    column-gap: 24px;
-    row-gap: 35px;
     grid-template-columns: repeat(auto-fill, minmax(339px, 1fr));
     gap: 47px 30px;
   }
 }
 
-/* 320px - 767px */
-@media screen and (max-width: 767px) {
+/* 320px - 768px */
+@media screen and (max-width: 768px) {
   .movie-card-list {
     gap: 32px;
     padding: 40px 10px 13px 10px;

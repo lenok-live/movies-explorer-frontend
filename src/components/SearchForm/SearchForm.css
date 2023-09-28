@@ -62,13 +62,14 @@
   }
 }
 
-/* 320px - 767px  */
-@media screen and (max-width: 767px) {
+/* 320px - 768px  */
+@media screen and (max-width: 768px) {
   .search-form {
     padding: 80px 14px 10px;
   }
 
   .search-form__input {
-    padding-block: 13px;
+    padding: 12px 0 13px 12px;
+    max-width: 225px;
   }
 }

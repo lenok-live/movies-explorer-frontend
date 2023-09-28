@@ -1,4 +1,4 @@
-import './AuthMobile.css';
+import './NavigationMobile.css';
 import { NavLink} from "react-router-dom";
 
 export default function NavigationMobile(props) {

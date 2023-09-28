@@ -1,6 +1,6 @@
 .techs {
   background-color: #272727;
-  padding: 100px 70px;
+  padding: 100px 70px 85px;
 }
 
 .techs__title {
@@ -42,20 +42,13 @@
   grid-template-rows: 60px;
   justify-content: center;
   grid-gap: 10px;
+  padding: 0;
 }
 
 .techs__skill {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #fff;
-  text-align: center;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  letter-spacing: -0.56px;
-  text-decoration: none;
   margin: 0;
   background: #303030;
   border-radius: 10px;
@@ -64,6 +57,17 @@
 
 .techs__skill:hover {
  opacity: .6;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: -0.56px;
 }
 
 /* 768px - 1279px */
@@ -95,11 +99,11 @@
   }
 }
 
-/* 320px - 767px */
-@media screen and (max-width: 767px) {
+/* 320px - 768px */
+@media screen and (max-width: 768px) {
   .techs {
     background-color: #202020;
-    padding: 70px 18px;
+    padding: 60px 18px;
   }
 
   .techs__title {

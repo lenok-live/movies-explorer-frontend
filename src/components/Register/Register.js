@@ -9,6 +9,7 @@ export default function Register() {
       <AuthInputForName />
       <AuthInputForEmail />
       <AuthInputForPassword />
+      <p className="auth__error">Что-то пошло не так...</p>
     </Auth>
   );
 }
