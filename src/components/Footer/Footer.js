@@ -1,6 +1,16 @@
 import "./Footer.css";
+import {useLocation} from "react-router-dom";
+import {routes} from "../../constrains/routes";
 
 export default function Footer() {
+  const path = useLocation().pathname;
+
+  if((path === '/signup') || (path === '/signin') || (path === '/profile')) {
+    return
+  } else if (!routes.some(item => item.path === path)) {
+    return
+  }
+
   return (
     <footer className="footer">
       <h2 className="footer__title">

@@ -8,19 +8,19 @@ import Login from "../Login/Login";
 import Register from "../Register/Register";
 import Main from "../Main/Main";
 import PageNotFound from "../PageNotFound/PageNotFound";
+import RoutersComponent from "./RoutesComponent/RoutersComponent";
+import Header from "../Header/Header";
+import Footer from "../Footer/Footer";
+import {UserProvider} from "../../context/user";
 
 export default function App() {
   return (
     <div className="page">
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/movies" element={<Movies />} />
-        <Route path="/saved-movies" element={<SavedMovies />} />
-        <Route path="/profile" element={<Profile />} />
-        <Route path="/signup" element={<Register />} />
-        <Route path="/signin" element={<Login />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
+      <UserProvider>
+        <Header />
+        <RoutersComponent />
+        <Footer />
+      </UserProvider>
     </div>
   );
 }

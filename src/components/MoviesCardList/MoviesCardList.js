@@ -4,33 +4,19 @@ import React from 'react';
 import MoviesCard from '../MoviesCard/MoviesCard';
 import './MoviesCardList.css';
 
-import test from '../../utils/test.js';
 
-export default function MoviesCardList({ type }) {
-
-  const [movies, setMovies] = React.useState([]);
-
-  function testGetMovies() {
-    setMovies(test);
-  }
-
-  React.useEffect(() => {
-    testGetMovies();
-  }, []);
+export default function MoviesCardList({ setVisibleMovies, savedFilms, setSavedFilms, movies, error }) {
 
   return (
-    <section className="movie-card-list" aria-label="Список фильмов">
-      {movies.map((movie) => {
-        return (
-          <MoviesCard
-            key={movie.id}
-            name={movie.nameRU}
-            duration={movie.duration}
-            thumbnail={movie.thumbnail}
-            type={type}
-          />
-        );
-      })}
+    <section className="movie-card__list" aria-label="Список фильмов">
+
+        {movies.length ? movies.map((movie) => (
+            <MoviesCard setVisibleMovies={setVisibleMovies}
+                        setSavedFilms={setSavedFilms}
+                        savedFilms={savedFilms}
+                        key={movie.id || movie._id}
+                        movie={movie} />
+        )) :  <div className={'center'}><h1>{error}</h1></div>}
     </section>
   );
 }

@@ -1,0 +1,9 @@
+export const MOVIES_ON_PAGE_COUNT_PC = 12;
+export const MOVIES_ON_PAGE_COUNT_TABLET = 8;
+export const MOVIES_ON_PAGE_COUNT_MOBILE = 5;
+export const LOAD_MOVIES_COUNT_PC = 3;
+export const LOAD_MOVIES_COUNT_TABLET = 2;
+export const LOAD_MOVIES_COUNT_MOBILE = 2;
+export const MOBILE_WIDTH = 749;
+export const TABLET_WIDTH = 1139;
+export const SHORT_TIME = 40;

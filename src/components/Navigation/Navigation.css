@@ -3,6 +3,8 @@
   justify-content: center;
   gap: 16px;
   align-items: center;
+  align-self: center;
+  width: 100%;
 }
 
 .navigation__link {
@@ -16,8 +18,8 @@
 
 @media (max-width: 1279px) {
   .navigation {
-    flex-direction: column;
-    gap: 22px;
+    align-self: center;
+    width: 100%;
   }
 
   .navigation__link {
@@ -29,6 +31,9 @@
 }
 
 @media (max-width: 768px) {
+  .navigation {
+    flex-direction: column;
+  }
   .navigation__link {
     font-size: 18px;
     font-style: normal;

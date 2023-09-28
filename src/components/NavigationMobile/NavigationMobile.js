@@ -13,6 +13,7 @@ export default function NavigationMobile(props) {
                 <button
                     className='auth-mobile__close'
                     onClick={onHandleHamburger}
+                    type="button"
                 />
                 <nav className='auth-mobile__navigation'>
                     <li className='auth-mobile__list-item'>

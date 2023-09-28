@@ -31,6 +31,9 @@
   outline: none;
 }
 
+
+
+
 .search-form__input::placeholder {
   color: #a0a0a0;
 }
@@ -55,6 +58,10 @@
   transform: scale(0.9);
 }
 
+.search-form__button:disabled {
+  opacity: 0.3;
+}
+
 /* 768px - 1279px */
 @media screen and (max-width: 1279px) {
   .search-form {
@@ -69,7 +76,14 @@
   }
 
   .search-form__input {
+    max-width: 90%;
     padding: 12px 0 13px 12px;
-    max-width: 225px;
   }
+}
+
+@media (max-width: 468px) {
+  .search-form__input {
+    max-width: 75%;
+  }
+
 }

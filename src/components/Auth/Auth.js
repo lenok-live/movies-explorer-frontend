@@ -1,7 +1,7 @@
 import "./Auth.css";
 import { Link } from "react-router-dom";
 
-export default function Auth({ mode = "register", children, onClick }) {
+export default function Auth({ mode = "register", children, onClick, isValid }) {
   const MODES = {
     register: {
       title: "Добро пожаловать!",
@@ -46,6 +46,7 @@ export default function Auth({ mode = "register", children, onClick }) {
             className="auth__submit-button"
             onClick={onClick}
             type="submit"
+            disabled={!isValid}
           >
             {MODES[mode].buttonText}
           </button>

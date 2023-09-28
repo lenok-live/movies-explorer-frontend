@@ -11,7 +11,6 @@ import Footer from "../Footer/Footer";
 export default function Main() {
   return (
     <>
-      <Header />
       <main className="main">
         <Promo />
         <AboutProject />
@@ -19,7 +18,6 @@ export default function Main() {
         <AboutMe />
         <Portfolio />
       </main>
-      <Footer />
     </>
   );
 }

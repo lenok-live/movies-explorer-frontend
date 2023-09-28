@@ -10,14 +10,45 @@ export default function Hamburger(props) {
   // const onHandleHamburger = true;
   const ref = useRef(null);
 
-  const handleClick = () => {
-    if (ref.current.style.visibility === "hidden") {
-      ref.current.style.visibility = "visible";
-      ref.current.style.transform = "translateX(-100%)";
+  const toggleMenu = (ref) => {
+    const {current} = ref;
+    if(current.classList.contains('hidden')) {
+      current.classList.remove('hidden');
+      current.classList.add('visible');
     } else {
-      ref.current.style.visibility = "hidden";
+      current.classList.add('hidden');
+      current.classList.remove('visible');
     }
-  };
+  }
+
+  const closeMenu = (ref) => {
+    const { current } = ref;
+    current.classList.add('hidden');
+    current.classList.remove('visible');
+  }
+
+  const routesList = [
+    {
+      to: '/',
+      title: 'Главная',
+      className: 'menu__profile'
+    },
+    {
+      to: '/movies',
+      title: 'Фильмы',
+      className: 'navigation__link'
+    },
+    {
+      to: '/saved-movies',
+      title: 'Сохраненные фильмы',
+      className: 'navigation__link'
+    },
+    {
+      to: '/profile',
+      title: 'Аккаунт',
+      className: 'header__link'
+    }
+  ]
 
   return (
     <>
@@ -25,20 +56,19 @@ export default function Hamburger(props) {
         className="header__burger-btn"
         id="burger"
         type="button"
-        onClick={handleClick}
+        onClick={() => toggleMenu(ref)}
       >
         <span></span>
         <span></span>
         <span></span>
       </button>
-
-      <nav ref={ref} className="menu" id="menu">
-      <Link to="/profile" className="menu__profile" title="Аккаунт">
-      Главная
-    </Link>
-        <Navigation />
-        <ProfileLink />
-      </nav>
+        <nav ref={ref} className="menu" id="menu">
+          {
+            routesList.map(route =>
+              <Link key={route.to} onClick={() => closeMenu(ref)} to={route.to} className={route.className} title={route.title}>{route.title}</Link>
+            )
+          }
+        </nav>
     </>
     // <button className="hamburger" type="button" onClick={onHandleHamburger} />
   );
