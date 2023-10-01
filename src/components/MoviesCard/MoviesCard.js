@@ -36,41 +36,42 @@ export default function MoviesCard({ setVisibleMovies, movie, savedFilms, setSav
   }, [like])
 
   const handleLikeClick = async () => {
-    const token = localStorage.getItem('jwt');
-    const newCard = {
-      country: movie.country,
-      description: movie.description,
-      director: movie.director,
-      duration: movie.duration,
-      image: movie.image.url ? `https://api.nomoreparties.co${movie.image.url}` : movie.image,
-      movieId: movie.id,
-      nameEN: movie.nameEN,
-      nameRU: movie.nameRU,
-      thumbnail: "https://www.yandex.com",
-      trailerLink: movie.trailerLink,
-      year: movie.year
-    }
-
-    try {
-      if (like) {
-        await mainApi.removeFilm(likedCard._id, token).then(() => {
-          setSavedFilms(prevFilms => prevFilms.filter(savedFilm => savedFilm._id !== likedCard._id));
-          setLikedCard(null);
-          setLike(false);
-        }).catch(err => {
-          alert('Не получилось снять лайк. Попробуйте перезагрузить страничку');
-        });
-      } else {
-        await mainApi.createFilm(newCard, token).then((res) => {
-          setLikedCard(res);
-          setLike(true);
-        }).catch(() => {
-          alert('Не получилось поставить лайк. Попробуйте перезагрузить страничку');
-        });
-      }
-    } catch (error) {
-      console.error('Error handling like:', error);
-    }
+    // const token = localStorage.getItem('jwt');
+    // const newCard = {
+    //   country: movie.country,
+    //   description: movie.description,
+    //   director: movie.director,
+    //   duration: movie.duration,
+    //   image: movie.image.url ? `https://api.nomoreparties.co${movie.image.url}` : movie.image,
+    //   movieId: movie.id,
+    //   nameEN: movie.nameEN,
+    //   nameRU: movie.nameRU,
+    //   thumbnail: "https://www.yandex.com",
+    //   trailerLink: movie.trailerLink,
+    //   year: movie.year
+    // }
+    //
+    // try {
+    //   if (like) {
+    //     await mainApi.removeFilm(likedCard._id, token).then(() => {
+    //       setSavedFilms(prevFilms => prevFilms.filter(savedFilm => savedFilm._id !== likedCard._id));
+    //       setLikedCard(null);
+    //       setLike(false);
+    //     }).catch(err => {
+    //       alert('Не получилось снять лайк. Попробуйте перезагрузить страничку');
+    //     });
+    //   } else {
+    //     await mainApi.createFilm(newCard, token).then((res) => {
+    //       setLikedCard(res);
+    //       setLike(true);
+    //     }).catch(() => {
+    //       alert('Не получилось поставить лайк. Попробуйте перезагрузить страничку');
+    //     });
+    //   }
+    // } catch (error) {
+    //   console.error('Error handling like:', error);
+    // }
+    setLike(prev => !prev)
   };
 
   const handleRemoveLike = async () => {
@@ -88,7 +89,7 @@ export default function MoviesCard({ setVisibleMovies, movie, savedFilms, setSav
 
 
   return (
-    <article className='movie-card'>
+    <li>
       <img
         src={movie.image.url ? `https://api.nomoreparties.co${movie.image.url}` : movie.image}
         alt={`Кадр из фильма ${movie.nameRU}`}
@@ -119,6 +120,6 @@ export default function MoviesCard({ setVisibleMovies, movie, savedFilms, setSav
           onClick={handleLikeClick}
         />
       )}
-    </article>
+    </li>
   );
 }

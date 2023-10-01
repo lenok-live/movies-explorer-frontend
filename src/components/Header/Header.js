@@ -7,23 +7,25 @@ import Navigation from "../Navigation/Navigation";
 import Hamburger from "../Hamburger/Hamburger";
 import ProfileLink from "../ProfileLink/ProfileLink";
 import {routes} from "../../constrains/routes";
-import {UserContext} from "../../context/user";
+import {UserContext} from "../../context/user/context";
 
 export default function Header() {
   const navigate = useLocation();
 
   const {isLoggedIn} = useContext(UserContext);
 
-  // const isLoggedIn = true;
+  // const isLoggedIn = false;
 
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768)
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1279)
 
   const [isOpen, setIsOpen] = useState(false);
 
+  function handleResize() {
+    setIsMobile(window.innerWidth <= 1279);
+  }
+
   useEffect(() => {
-    function handleResize() {
-      setIsMobile(window.innerWidth <= 768);
-    }
+    handleResize();
 
     window.addEventListener('resize', handleResize);
 
@@ -31,6 +33,11 @@ export default function Header() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
+  useEffect(() => {
+    console.log('render');
+    handleResize();
+  }, [isLoggedIn]);
 
   if( navigate.pathname === '/signin' || navigate.pathname === '/signup' || navigate.pathname === '/no-results'  || !routes.some(route => route.path === navigate.pathname)) {
     return
@@ -48,10 +55,10 @@ export default function Header() {
           <nav className="header__container">
             {isMobile
             ? <Hamburger />
-            : <div className='header__wrapper'>
+            : <>
                 <Navigation />
                 <ProfileLink />
-              </div>
+              </>
             }
           </nav>
         ) : (

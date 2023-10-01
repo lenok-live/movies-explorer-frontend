@@ -1,5 +1,5 @@
 .more {
-  padding: 50px 0 80px;
+  padding: 46px 0 100px;
   display: flex;
   justify-content: center;
   background: #202020;
@@ -9,11 +9,11 @@
   display: block;
   max-width: 320px;
   width: 100%;
-  padding: 11px 0 9px;
+  padding: 10px 0;
   border-radius: 6px;
   border: 1px solid #424242;
   cursor: pointer;
-  background-color: #2F2F2F;
+  background-color: transparent;
   color: #FFF;
   text-align: center;
   font-size: 12px;
@@ -32,10 +32,15 @@
 }
 
 /* 768px - 1279px */
-@media screen and (max-width: 1279px) {}
+@media screen and (max-width: 1279px) {
+  .more {
+    padding: 50px 0 80px;
+  }
 
-/* 320px - 768px */
-@media screen and (max-width: 768px) {
+}
+
+/* 320px - 767px */
+@media screen and (max-width: 767px) {
   .more__button {
     max-width: 240px;
   }

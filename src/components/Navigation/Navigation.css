@@ -7,7 +7,7 @@
   width: 100%;
 }
 
-.navigation__link {
+.menu__navigation-link {
   color: #fff;
   text-decoration: none;
   font-size: 13px;
@@ -22,7 +22,7 @@
     width: 100%;
   }
 
-  .navigation__link {
+  .menu__navigation-link {
     font-size: 18px;
     font-style: normal;
     font-weight: 500;
@@ -30,11 +30,11 @@
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
   .navigation {
     flex-direction: column;
   }
-  .navigation__link {
+  .menu__navigation-link {
     font-size: 18px;
     font-style: normal;
     font-weight: 500;

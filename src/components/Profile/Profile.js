@@ -65,14 +65,14 @@ export default function Profile() {
   }
 
   return (
-    <>
+    <main>
       <section className="profile">
         <div className="profile__container">
           <h1 className="profile__title">Привет, {userData.name}!</h1>
 
           <form className="profile__form">
-            <label className="profile__input-container">
-              <div className="profile__input-wrapper">
+            <div className="profile__input-container">
+              <label className="profile__input-wrapper">
                 <span className="profile__input-span">Имя</span>
                 <input
                   type="text"
@@ -85,14 +85,14 @@ export default function Profile() {
                   value={values.name}
                   placeholder="Лена"
                 />
-              </div>
-              <span className="auth__error">
+              </label>
+              {/* <span className="auth__error">
                   {errors.name}
-                </span>
-            </label>
+                </span> */}
+            </div>
 
-            <label className="profile__input-container">
-              <div className="profile__input-wrapper">
+            <div className="profile__input-container">
+              <label className="profile__input-wrapper">
 
                 <span className="profile__input-span">E-mail</span>
                 <input
@@ -104,11 +104,11 @@ export default function Profile() {
                   onChange={handleChange}
                   placeholder="example@example.com"
                 />
-              </div>
-              <span className="auth__error">
+              </label>
+              {/* <span className="auth__error">
                   {errors.email}
-                </span>
-            </label>
+                </span> */}
+            </div>
 
 
             <button type="submit" className="profile__button-edit" onClick={handleSubmitChanges} disabled={!isValid}>
@@ -129,6 +129,6 @@ export default function Profile() {
           </form>
         </div>
       </section>
-    </>
+    </main>
   );
 }

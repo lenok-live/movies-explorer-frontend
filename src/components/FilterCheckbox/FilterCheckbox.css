@@ -87,11 +87,11 @@
   }
 }
 
-/* 320px - 768px */
-@media screen and (max-width: 768px) {
+/* 320px - 767px */
+@media screen and (max-width: 767px) {
   .filter-checkbox {
     margin-top: 46px;
-    padding-bottom: 40px;
+    padding-bottom: 39px;
   }
 
   .filter-checkbox__signature {

@@ -1,18 +1,21 @@
 .about-me {
   padding: 110px 70px 101px;
-  background-color: #202020;
-  color: #fff;
 }
 
 .about-me__title {
   margin: 0;
-  padding: 0 0 23px;
+  padding: 0 0 24px;
   border-bottom: 1px solid #DADADA;
   font-size: 22px;
   font-style: normal;
   font-weight: 400;
   line-height: normal;
   letter-spacing: -0.88px;
+}
+
+.about-me__wrapper {
+  max-width: 600px;
+  width: 100%;
 }
 
 .about-me__container {
@@ -39,7 +42,6 @@
 }
 
 .about-me__description {
-  max-width: 600px;
   margin: 0;
   font-size: 14px;
   font-style: normal;
@@ -111,8 +113,8 @@
   }
 }
 
-/* 320px - 768px */
-@media screen and (max-width: 768px) {
+/* 320px - 767px */
+@media screen and (max-width: 767px) {
   .about-me {
     padding: 70px 14px 70px;
   }

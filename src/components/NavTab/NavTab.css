@@ -21,23 +21,28 @@
   display: block;
   padding: 10px 0;
   text-align: center;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 16px;
   transition: opacity 0.3s;
+  font-size: 12px;
+  /* line-height: 16px; */
 }
 
 .navtab__link a {
   font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 16px;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
 }
 
 .navtab__link:hover {
   opacity: 0.7;
 }
 
-/*320px - 768px*/
-@media screen and (max-width: 768px) {
+/*320px - 767px*/
+@media screen and (max-width: 767px) {
   .navtab__list {
     column-gap: 6px;
   }

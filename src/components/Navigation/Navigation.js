@@ -5,13 +5,13 @@ export default function Navigation() {
   return (
     <nav className="navigation">
       <Link
-        className="navigation__link"
+        className="menu__navigation-link"
         to="/movies"
         title="Фильмы">
         Фильмы
       </Link>
       <Link
-        className="navigation__link"
+        className="menu__navigation-link"
         to="/saved-movies"
         title="Сохранённые фильмы">
         Сохранённые фильмы

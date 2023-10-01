@@ -5,13 +5,6 @@
   padding: 18px 70px;
 }
 
-.header__container {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  width: 100%;
-}
-
 .header__logo {
   width: 38px;
   height: 38px;
@@ -21,6 +14,15 @@
 
 .header__logo:hover {
   opacity: 0.7;
+}
+
+.header__container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 45px;
 }
 
 .header__link {
@@ -40,6 +42,7 @@
   text-decoration: none;
 }
 
+/* Ссылки Регистрация и Войти*/
 .auth-links {
   display: flex;
   column-gap: 30px;
@@ -63,38 +66,36 @@
 .auth-links__link_login {
   border-radius: 3px;
   background: #3DDC84;
-  padding-inline: 20px;
+  padding-inline: 21px;
   color: #000;
-}
-
-.header__wrapper {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  padding-left: 80px;
 }
 
 /* 768px - 1279px */
 @media screen and (max-width: 1279px) {
   .header {
-    padding: 15px 30px;
+    padding: 18px 30px;
   }
 
-  .header__wrapper {
+  .header__container {
+    justify-content: flex-end;
+    padding: 0;
   }
 
+  .auth-links__link_login {
+    padding-inline: 20px;
+  }
 
 }
 
-/*320px - 768px*/
-@media screen and (max-width: 768px) {
+/*320px - 767px*/
+@media screen and (max-width: 767px) {
   .header {
-    padding: 18px 14px 12px;
+    padding: 17px 14px;
   }
 
-  .header__wrapper {
+  /* .header__wrapper {
     display: none;
-  }
+  } */
 
   .auth-links {
     column-gap: 14px;
@@ -106,6 +107,13 @@
   }
 
   .auth-links__link_login {
-    padding-inline: 12px;
+    padding-inline: 13px;
   }
 }
+
+/* .header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding-left: 50px;
+} */

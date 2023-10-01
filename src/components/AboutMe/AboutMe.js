@@ -23,21 +23,21 @@ export default function AboutMe() {
             <li>
               <a
                 className="about-me__link"
-                href="https://vk.com/s7647"
-                target="_blank"
-                rel="noreferrer"
-              >
-                Vkontakte
-              </a>
-            </li>
-            <li>
-              <a
-                className="about-me__link"
                 href="https://github.com/lenok-live"
                 target="_blank"
                 rel="noreferrer"
               >
                 GitHub
+              </a>
+            </li>
+            <li>
+              <a
+                className="about-me__link"
+                href="https://vk.com/s7647"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Vkontakte
               </a>
             </li>
           </ul>

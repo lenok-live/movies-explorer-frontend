@@ -35,18 +35,35 @@ export default function Login () {
     <Auth mode="login" onClick={handleSubmit} isValid={isValid}>
       <label className="auth__input-container">
         <span className="auth__label">Email</span>
-        <input onChange={handleChange} type="email" name='email' required id="email" pattern='^.+@.+\..+$' value={email} className="auth__input" placeholder="Введите e-mail" />
-        <span className={'auth__error'}>
-            {errors.email}
-          </span>
+        <input
+          onChange={handleChange}
+          type="email"
+          name="email"
+          required
+          id="email"
+          pattern="^.+@.+\..+$"
+          value={email}
+          className="auth__input auth__input--email"
+          placeholder="Введите e-mail"
+        />
+        <span className="auth__error auth__error--email">{errors.email}</span>
       </label>
 
-      <label htmlFor="password" className="login__label">
+      <label htmlFor="password" className="auth__input-container">
         <span className="auth__label">Пароль</span>
-        <input onChange={handleChange} minLength='5' maxLength='12' name='password' required type="password" id="password" value={password} className="auth__input" placeholder="Введите пароль"  />
-        <span className={'auth__error'}>
-              {errors.password}
-          </span>
+        <input
+          onChange={handleChange}
+          minLength="5"
+          maxLength="12"
+          name="password"
+          required
+          type="password"
+          id="password"
+          value={password}
+          className="auth__input auth__input--password"
+          placeholder="Введите пароль"
+        />
+        <span className="auth__error auth__error--password">{errors.password}</span>
       </label>
       <div className="auth__space" />
     </Auth>

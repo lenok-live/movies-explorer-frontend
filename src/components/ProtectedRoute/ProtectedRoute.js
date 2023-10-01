@@ -16,9 +16,7 @@ const ProtectedRoute = ({children, isLoggedIn, isPublicPage}) => {
     isLoggedIn ? (
       <>{children}</>
     ) : (
-      <div className={'center'}>
-        <h1>У вас нет доступа к этой страничке</h1>
-      </div>
+      <>{children}</>
     )
   ) : (
     <>{children}</>

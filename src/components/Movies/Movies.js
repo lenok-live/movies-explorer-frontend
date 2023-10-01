@@ -15,6 +15,7 @@ import {
 } from "../../constrains/metaConstrains";
 import {useBrowserWidth} from "../../utils/useBrowserWidth";
 import Preloader from "../Preloader/Preloader";
+import test from '../../utils/test.js';
 
 export default function Movies() {
   const width = useBrowserWidth();
@@ -56,16 +57,7 @@ export default function Movies() {
     }
 
     const fetchSavedMovies = async () => {
-      try {
-        const token = localStorage.getItem('jwt');
-        await mainApi.getSavedFilms(token).then(
-          res => {
-            setSavedFilms(res)
-          }
-        );
-      } catch (err) {
-        alert('Не удалось подгрузить сохранённые фильмы')
-      }
+      setSavedFilms(test);
     }
     fetchSavedMovies()
 
@@ -78,6 +70,8 @@ export default function Movies() {
       setMessage('Добро пожаловать, введите название фильма чтобы начать')
       setIsLoading(false)
     }
+
+    setSearchedMovies(test); // remove when do logic
   }, []);
 
   const startFilter = useMemo(() => (movieName, shortFilter) => {
@@ -95,12 +89,13 @@ export default function Movies() {
 
     try {
       if (!storageMovies) { // делаем проверку. Если нет уже загруженных - подгружаем.
-        const data = await moviesApi.getFilms();
+        // const data = await moviesApi.getFilms();
 
-        if (data.length > 0) {
-          localStorage.setItem('movies', JSON.stringify(data));
-          setSearchedMovies(data);
-        }
+        setSearchedMovies(test);
+        // if (data.length > 0) {
+        //   localStorage.setItem('movies', JSON.stringify(data));
+        //   setSearchedMovies(data);
+        // }
       }
     } catch (error) {
       setMessage('Проблема при загрузке фильмов');
@@ -124,7 +119,8 @@ export default function Movies() {
           ? <Preloader />
           : <>
             <MoviesCardList setVisibleMovies={setVisibleMovies} savedFilms={savedFilms} setSavedFilms={setSavedFilms} movies={visibleMovies} error={message} />
-            {((visibleMovies.length && (visibleMovies.length !== searchedMovies.length)) && <More handleLoadMore={loadMore} />) || null}
+            <More />
+            {/* {((visibleMovies.length && (visibleMovies.length !== searchedMovies.length)) && <More handleLoadMore={loadMore} />) || null} */}
           </>
         }
       </main>

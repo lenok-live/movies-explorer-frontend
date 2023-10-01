@@ -1,4 +1,4 @@
-.movie-card {
+.movie-card__list li {
   display: block;
   position: relative;
   max-width: 360px;
@@ -18,7 +18,7 @@
 .movie-card__wrapper {
   display: flex;
   justify-content: space-between;
-  padding: 10px 14px 0 14px;
+  padding: 14px 14px 0 14px;
 }
 
 .movie-card__name {
@@ -87,8 +87,11 @@
 
 /* 768px - 1279px */
 @media screen and (max-width: 1279px) {
+  .movie-card__thumbnail {
+    height: 190px;
+  }
   .movie-card__wrapper {
-    padding: 23px 0 0 0;
+    padding: 25px 0 0 0;
   }
 
   .movie-card__duration {
@@ -96,10 +99,14 @@
   }
 }
 
-/* 320px - 768px */
-@media screen and (max-width: 768px) {
+/* 320px - 767px */
+@media screen and (max-width: 767px) {
+  .movie-card__thumbnail {
+    height: 168px;
+  }
+
   .movie-card__wrapper {
-    padding: 12px 0 0 0;
+    padding: 15px 0 0 0;
   }
 
   .movie-card__name {

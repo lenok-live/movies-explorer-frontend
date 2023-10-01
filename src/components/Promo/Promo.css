@@ -24,12 +24,12 @@
   margin: 0 auto 151px;
 }
 
-/* 768px - 1279px */
+/* 768px - 1279px планшетная адаптация */
 @media screen and (max-width: 1279px) {
   .promo__container {
     /* max-width: 728px; */
     padding: 350px 0 30px;
-    margin: 20px 20px;
+    margin: 20px 20px 0 20px;
   }
 
   .promo__title {
@@ -41,12 +41,12 @@
   }
 }
 
-/* 320px - 768px */
-@media screen and (max-width: 768px) {
+/* 320px - 767px mobile ver*/
+@media screen and (max-width: 767px) {
   .promo__container {
     /* max-width: 292px; */
     padding: 220px 0 17px;
-    margin: 14px 14px;
+    margin: 14px 14px 0;
   }
 
   .promo__title {

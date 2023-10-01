@@ -27,30 +27,33 @@ export const UserProvider = ({ children }) => {
   };
 
   useEffect(() => {
-      fetchUserData().finally(() => {
-        setIsLoading(false);
-      });
+      // fetchUserData().finally(() => {
+      //   setIsLoading(false);
+      // });
+      setIsLoading(false);
   }, []);
 
   const login = async (email, password) => {
-    try {
-      const { token } = await mainApi.authorization(email, password).catch(() => {
-        alert('Неправильный логин или пароль')
-      });
-
-      if(token) {
-        const user = await mainApi.getMe(token).then(res => {
-          return res
-        });
-        localStorage.setItem('jwt', token);
-        setIsLoggedIn(true);
-        setUserData(user);
-
-        return true;
-      }
-    } catch (error) {
-      console.error('Ошибка при попытке авторизации: ', error);
-    }
+    // try {
+    //   const { token } = await mainApi.authorization(email, password).catch(() => {
+    //     alert('Неправильный логин или пароль')
+    //   });
+    //
+    //   if(token) {
+    //     const user = await mainApi.getMe(token).then(res => {
+    //       return res
+    //     });
+    //     localStorage.setItem('jwt', token);
+    //     setIsLoggedIn(true);
+    //     setUserData(user);
+    //
+    //     return true;
+    //   }
+    // } catch (error) {
+    //   console.error('Ошибка при попытке авторизации: ', error);
+    // }
+    setIsLoggedIn(true);
+    setUserData({email: 'someemail@mail.ru', name: 'TestUser'})
   }
 
   const logout = () => {

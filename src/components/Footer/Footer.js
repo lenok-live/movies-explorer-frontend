@@ -1,14 +1,14 @@
 import "./Footer.css";
-import {useLocation} from "react-router-dom";
-import {routes} from "../../constrains/routes";
+import { useLocation } from "react-router-dom";
+import { routes } from "../../constrains/routes";
 
 export default function Footer() {
   const path = useLocation().pathname;
 
-  if((path === '/signup') || (path === '/signin') || (path === '/profile')) {
-    return
-  } else if (!routes.some(item => item.path === path)) {
-    return
+  if (path === "/signup" || path === "/signin" || path === "/profile") {
+    return;
+  } else if (!routes.some((item) => item.path === path)) {
+    return;
   }
 
   return (
@@ -20,26 +20,30 @@ export default function Footer() {
       <div className="footer__container">
         <p className="footer__text">&copy; 2023</p>
 
-        <div className="footer__container-link">
-          <a
-            className="footer__link"
-            href="https://practicum.yandex.ru"
-            title="Яндекс.Практикум"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Яндекс.Практикум
-          </a>
-          <a
-            className="footer__link"
-            href="https://github.com/lenok-live"
-            title="Github"
-            target="_blank"
-            rel="noreferrer"
-          >
-            Github
-          </a>
-        </div>
+        <ul className="footer__container-links">
+          <li>
+            <a
+              className="footer__link"
+              href="https://practicum.yandex.ru"
+              title="Яндекс.Практикум"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Яндекс.Практикум
+            </a>
+          </li>
+          <li>
+            <a
+              className="footer__link"
+              href="https://github.com/lenok-live"
+              title="Github"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Github
+            </a>
+          </li>
+        </ul>
       </div>
     </footer>
   );

@@ -2,6 +2,7 @@ import moviesPhoto from '../images/pic.png';
 
 const test = [
   {
+    id: 1,
     movieId: 1,
     nameRU: '33 слова о дизайне',
     nameEN: '33',
@@ -115,6 +116,48 @@ const test = [
   },
   {
     id: 9,
+    nameRU: '33 слова о дизайне',
+    nameEN: '33',
+    director: 'Стивен',
+    country: 'РФ',
+    year: '2016',
+    duration: 60,
+    description:
+      'Описание',
+    trailerLink: 'https://www.youtube.com/watch?v=3WaA4oH-5R4&t=2s',
+    image: moviesPhoto,
+    thumbnail: moviesPhoto,
+  },
+  {
+    id: 10,
+    nameRU: '33 слова о дизайне',
+    nameEN: '33',
+    director: 'Стивен',
+    country: 'РФ',
+    year: '2016',
+    duration: 60,
+    description:
+      'Описание',
+    trailerLink: 'https://www.youtube.com/watch?v=3WaA4oH-5R4&t=2s',
+    image: moviesPhoto,
+    thumbnail: moviesPhoto,
+  },
+  {
+    id: 11,
+    nameRU: '33 слова о дизайне',
+    nameEN: '33',
+    director: 'Стивен',
+    country: 'РФ',
+    year: '2016',
+    duration: 60,
+    description:
+      'Описание',
+    trailerLink: 'https://www.youtube.com/watch?v=3WaA4oH-5R4&t=2s',
+    image: moviesPhoto,
+    thumbnail: moviesPhoto,
+  },
+  {
+    id: 12,
     nameRU: '33 слова о дизайне',
     nameEN: '33',
     director: 'Стивен',

@@ -8,6 +8,7 @@ import {useEffect, useMemo, useState} from "react";
 import mainApi from "../../utils/api/MainApi";
 import searchFilter from "../../utils/searchFilter";
 import Preloader from "../Preloader/Preloader";
+import test from '../../utils/test';
 
 export default function SavedMovies() {
   const [isLoading, setIsLoading] = useState(true);
@@ -22,25 +23,27 @@ export default function SavedMovies() {
   }, [filteredMovies])
 
   useEffect(() => {
-    const fetchSavedFilms = async () => {
-      try {
-        const token = localStorage.getItem('jwt')
-        const data = await mainApi.getSavedFilms(token);
-        if (data.length > 0) {
-          setFilteredMovies(data);
-          setSavedMovies(data);
-        } else {
-          setError('Ничего не найдено');
-        }
-      } catch (err) {
-        setError('Ошибка при загрузке фильмов');
-        console.error(err);
-      }
-    }
+    // const fetchSavedFilms = async () => {
+    //   try {
+    //     const token = localStorage.getItem('jwt')
+    //     const data = await mainApi.getSavedFilms(token);
+    //     if (data.length > 0) {
+    //       setFilteredMovies(data);
+    //       setSavedMovies(data);
+    //     } else {
+    //       setError('Ничего не найдено');
+    //     }
+    //   } catch (err) {
+    //     setError('Ошибка при загрузке фильмов');
+    //     console.error(err);
+    //   }
+    setFilteredMovies(test);
+    setSavedMovies(test);
+    // }
 
-    fetchSavedFilms().finally(() => {
-      setIsLoading(false);
-    });
+    // fetchSavedFilms().finally(() => {
+      // setIsLoading(false);
+    // });
   }, [])
 
 

@@ -4,19 +4,21 @@ import React from 'react';
 import MoviesCard from '../MoviesCard/MoviesCard';
 import './MoviesCardList.css';
 
-
 export default function MoviesCardList({ setVisibleMovies, savedFilms, setSavedFilms, movies, error }) {
 
   return (
-    <section className="movie-card__list" aria-label="Список фильмов">
+    <section className="movie-card" aria-label="Список фильмов">
+      <ul className="movie-card__list">
 
         {movies.length ? movies.map((movie) => (
-            <MoviesCard setVisibleMovies={setVisibleMovies}
+            <MoviesCard
+                        key={movie.id || movie._id}
+                        setVisibleMovies={setVisibleMovies}
                         setSavedFilms={setSavedFilms}
                         savedFilms={savedFilms}
-                        key={movie.id || movie._id}
                         movie={movie} />
         )) :  <div className={'center'}><h1>{error}</h1></div>}
+      </ul>
     </section>
   );
 }
