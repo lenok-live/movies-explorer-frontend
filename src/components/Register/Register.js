@@ -56,7 +56,7 @@ export default function Register() {
       </span>
 
       <label htmlFor="password" className="auth__label">Пароль</label>
-      <input onChange={handleChange} minLength='5' maxLength='12' name='password' required type="password" id="password" value={password} className="auth__input" placeholder="Введите пароль"  />
+      <input onChange={handleChange} minLength='8' maxLength='15' name='password' required type="password" id="password" value={password} className="auth__input" placeholder="Введите пароль"  />
       <span className={'auth__error'}>
         {/* {errors.password} */}
         <label className="auth__error-wrap">{errors.password}</label>

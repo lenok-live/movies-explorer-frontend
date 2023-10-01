@@ -53,8 +53,8 @@ export default function Login () {
         <span className="auth__label">Пароль</span>
         <input
           onChange={handleChange}
-          minLength="5"
-          maxLength="12"
+          minLength="8"
+          maxLength="15"
           name="password"
           required
           type="password"
