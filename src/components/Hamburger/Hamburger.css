@@ -94,7 +94,7 @@
   text-decoration: none;
 }
 
-.menu__list li:nth-child(2) {
+.menu__list__active {
   border-bottom: 2px solid #fff;
   padding-bottom: 4px;
 }

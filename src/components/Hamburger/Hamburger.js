@@ -4,6 +4,7 @@ import {useRef, useState} from "react";
 import { Link } from "react-router-dom";
 import Navigation from "../Navigation/Navigation";
 import ProfileLink from "../ProfileLink/ProfileLink";
+import { NavLink } from 'react-router-dom/dist';
 
 export default function Hamburger(props) {
   // const { onHandleHamburger } = props;
@@ -53,7 +54,11 @@ export default function Hamburger(props) {
       title: 'Аккаунт',
       className: 'header__link'
     }
-  ]
+  ];
+
+  const isCurrentLink = ({ isActive }) => isActive
+  ? 'menu__list__active'
+  : '';
 
 
   return (
@@ -74,7 +79,7 @@ export default function Hamburger(props) {
             {
             routesList.map(route =>
               <li>
-              <Link key={route.to} onClick={() => closeMenu(ref)} to={route.to} className={`${route.className} `} title={route.title}>{route.title}</Link>
+                <NavLink  key={route.to} onClick={() => closeMenu(ref)} to={route.to} className={(active) => `${route.className} ${isCurrentLink(active)}`} title={route.title}>{route.title}</NavLink>
               </li>
             )
           }
