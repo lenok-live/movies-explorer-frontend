@@ -1,0 +1,7 @@
+.center {
+  grid-column: 1 / -1; /* Занимает все колонки горизонтально */
+  display: flex;
+  justify-content: center; /* Центрирование по горизонтали */
+  align-items: center; /* Центрирование по вертикали */
+  text-align: center;
+}

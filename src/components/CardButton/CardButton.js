@@ -1,0 +1,36 @@
+import './CardButton.css';
+
+function CardButton({ className, type, onClick }) {
+  const TYPE_CONFIG = {
+    save: {
+      text: 'Сохранить',
+      className: 'card-button_type_save',
+      alt: null,
+    },
+    done: {
+      text: '',
+      className: 'card-button_type_done',
+      alt: 'Снять отметку с фильма',
+    },
+    delete: {
+      text: '',
+      className: 'card-button_type_delete',
+      alt: 'Удалить фильм из сохранённых',
+    },
+  };
+
+  return (
+    <button
+      className='movie-card__button'
+      type="button"
+      {...(TYPE_CONFIG[type].alt
+        ? { 'aria-label': TYPE_CONFIG[type].alt }
+        : {})}
+      onClick={onClick}
+    >
+      {TYPE_CONFIG[type].text}
+    </button>
+  );
+}
+
+export default CardButton;
