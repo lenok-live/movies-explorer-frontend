@@ -5,4 +5,4 @@
 https://moviesul.nomoredomainsrocks.ru/ -> Ссылка на фронтенд
 https://api.moviesul.nomoredomainsicu.ru/ -> Ссылка на бэкэнд
 
-https://github.com/lenok-live/movies-explorer-frontend/pull/2
+Pull requestt -> https://github.com/lenok-live/movies-explorer-frontend/pull/2
