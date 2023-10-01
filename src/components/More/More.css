@@ -1,0 +1,47 @@
+.more {
+  padding: 46px 0 100px;
+  display: flex;
+  justify-content: center;
+  background: #202020;
+}
+
+.more__button {
+  display: block;
+  max-width: 320px;
+  width: 100%;
+  padding: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #424242;
+  cursor: pointer;
+  background-color: transparent;
+  color: #FFF;
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  transition: opacity .3s, transform .3s;
+}
+
+.more__button:active {
+  transform: scale(0.9);
+}
+
+.more__button:hover {
+  opacity: 0.8;
+}
+
+/* 768px - 1279px */
+@media screen and (max-width: 1279px) {
+  .more {
+    padding: 50px 0 80px;
+  }
+
+}
+
+/* 320px - 767px */
+@media screen and (max-width: 767px) {
+  .more__button {
+    max-width: 240px;
+  }
+}
