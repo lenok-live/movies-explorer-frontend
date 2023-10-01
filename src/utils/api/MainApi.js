@@ -80,7 +80,7 @@ class MainApi extends BaseApi {
 }
 
 const mainApi = new MainApi({
-  baseUrl: "http://api.moviesul.nomoredomainsicu.ru",
+  baseUrl: "https://api.moviesul.nomoredomainsicu.ru",
   headers: {
     "Content-Type": "application/json",
   }
