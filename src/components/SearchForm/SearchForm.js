@@ -4,22 +4,22 @@ import {useLocation} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {useFormAndValidation} from "../../hooks/useFormAndValidation";
 
-export default function SearchForm({ handleSearch }) {
+export default function SearchForm({ handleSearch, isMoviesLoaded }) {
   const { pathname } = useLocation();
 
-  const { values, handleChange, errors, isValid, setValues, setErrors } = useFormAndValidation();
+  const { values, handleChange, errors, isValid, setValues, setErrors, setIsValid } = useFormAndValidation();
 
   const [shortState, setShortState] = useState();
 
   const { searchInput } = values;
 
-  const handleSubmit = (e) => {
+
+  const handleSubmit = (e, searchInput, shortState) => {
     e.preventDefault();
     if(!searchInput) {
       setErrors({...errors, 'searchInput': 'Введите ключевое слово!'})
       return
     };
-
 
     if (pathname === '/movies') {
       localStorage.setItem('searchFilm', searchInput);
@@ -30,9 +30,21 @@ export default function SearchForm({ handleSearch }) {
       }
     }
 
-
     handleSearch(searchInput, shortState);
   };
+
+  const handleFilter = (e) => {
+    const checked =  e.target.checked;
+
+    if(isMoviesLoaded) {
+      handleSubmit(e, searchInput, checked);
+    }
+
+    if(searchInput) {
+      setShortState(checked)
+    }
+
+  }
 
   useEffect(() => {
     if (pathname === '/movies') {
@@ -48,12 +60,14 @@ export default function SearchForm({ handleSearch }) {
       if (savedInputValue || savedShorts) {
         handleSearch(savedInputValue, savedShorts);
       }
+
+      setIsValid(Boolean(savedInputValue))
     }
   }, []);
 
   return (
     <section>
-      <form className="search-form" onSubmit={handleSubmit}>
+      <form className="search-form" onSubmit={(e) => handleSubmit(e, searchInput, shortState)} noValidate>
         <div className="search-form__container-input">
           <input
             type="text"
@@ -64,10 +78,11 @@ export default function SearchForm({ handleSearch }) {
             onChange={handleChange}
             value={searchInput}
           />
-          <button type="submit" className="search-form__button" disabled={!isValid} />
+          <button type="submit" className="search-form__button" />
         </div>
+        <p className={'auth__error'}>{errors.searchInput}</p>
         <FilterCheckbox filter={shortState}
-                        setFilter={setShortState} />
+                        setFilter={handleFilter} status={isValid} />
       </form>
     </section>
   );

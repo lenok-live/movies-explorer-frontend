@@ -25,6 +25,10 @@
   appearance: none;
 }
 
+.filter-checkbox__input:disabled {
+  opacity: 0.3;
+}
+
 .filter-checkbox__signature {
   color: #fff;
   font-size: 12px;

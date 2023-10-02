@@ -7,7 +7,7 @@ const ProtectedRoute = ({children, isLoggedIn, isPublicPage}) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if ((isLoggedIn && pathname === '/signin') || (isLoggedIn && pathname === '/signup')) {
+    if ((isLoggedIn && pathname === '/signin') || (isLoggedIn && pathname === '/signup') || (!isLoggedIn && !isPublicPage)) {
       navigate('/');
     }
   }, [isLoggedIn, isPublicPage, pathname, navigate]);
@@ -17,7 +17,7 @@ const ProtectedRoute = ({children, isLoggedIn, isPublicPage}) => {
       <>{children}</>
     ) : (
       <div className={'center'}>
-        <h1>Зайдите в профиль чтобы посмотреть эту страницу</h1>
+        <h1>Удивительно, но пользователи не должны видеть это сообщение.</h1>
       </div>
     )
   ) : (

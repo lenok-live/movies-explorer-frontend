@@ -122,7 +122,7 @@ export default function Movies() {
   return (
     <>
       <main>
-        <SearchForm handleSearch={handleSearch} />
+        <SearchForm handleSearch={handleSearch} isMoviesLoaded={Boolean(visibleMovies && visibleMovies.length > 0)} />
         {isLoading
           ? <Preloader />
           : <>
