@@ -1,0 +1,240 @@
+.header__burger-btn {
+  display: none;
+  position: relative;
+  width: 44px;
+  height: 44px;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.header__burger-btn span {
+  display: block;
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  left: 10px;
+  background-color: #FFF;
+  transition: background-color .3s, opacity .3s, transform .5s;
+  will-change: transform;
+}
+
+.header__burger-btn:hover span {
+  /* background-color: rgb(174, 48, 48); */
+}
+
+.header__burger-btn span:nth-child(1) {
+  transform: translateY(-10px);
+}
+
+.header__burger-btn span:nth-child(3) {
+  transform: translateY(10px);
+}
+
+/* ========== Затемнение фона при открытии бургера ====================*/
+.mobile-nav {
+  background-color: rgba(0,0,0,.7);
+  color: #000;
+  display: flex;
+	position: relative;
+  justify-content: flex-end;
+  left: 0;
+	top: 0;
+  min-height: 100%;
+  min-width: 100%;
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  transition: .3s;
+  z-index: 20;
+}
+
+.mobile-nav_active {
+  opacity: 1;
+  visibility: visible;
+}
+/* ====================================================================*/
+
+.menu {
+  display: none;
+  position: fixed;
+  /* gap: 28px; */
+  right: -520px;
+  top: 0;
+  max-width: 520px;
+  width: 100%;
+  height: 100vh;
+  padding: 159px 0px 90px 0px;
+  background-color: #202020;
+  visibility: hidden;
+  transition: transform .5s, visibility .5s;
+  will-change: transform;
+  z-index: 100;
+}
+
+.menu__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  align-items: center;
+}
+
+.menu__list li{
+  text-decoration: none;
+}
+
+.menu__list__active {
+  border-bottom: 2px solid #fff;
+  padding-bottom: 4px;
+}
+
+.menu__list li:last-child {
+  margin-top: 590px;
+  min-width: 100px;
+}
+
+.hidden {
+  visibility: hidden !important;
+}
+
+.visible {
+  visibility: visible !important;
+  transform: translate(-100%) !important;
+}
+
+/*============================Крестик==================================*/
+
+.open span {
+  background-color: white;
+}
+
+.open span:nth-child(1) {
+  transform: translateY(0) rotate(45deg);
+}
+
+.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.open span:nth-child(3) {
+  transform: translateY(0) rotate(-45deg);
+}
+/*=====================================================================*/
+
+
+@media (max-width: 1279px) {
+  .header__burger-btn {
+    display: block;
+    z-index: 25;
+  }
+
+  .header__burger-btn span {
+    width: 25px;
+    height: 3px;
+    left: 15px;
+  }
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu-open {
+    transform: translateX(-100%);
+    visibility: visible;
+  }
+
+  .menu__profile {
+    color: #FFF;
+    text-align: center;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .menu__profile {
+    text-decoration: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .header__burger-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .header__burger-btn span {
+    height: 2.5px;
+    left: 10px;
+    top: 15px;
+  }
+
+  .menu {
+    /* display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed; */
+    right: -320px;
+    top: 0;
+    max-width: 320px;
+    padding: 144px 0 46px;
+  }
+
+  .menu__list {
+    gap: 24px;
+  }
+
+  .menu__list li:nth-child(2) {
+    padding-bottom: 7px;
+  }
+
+  .menu__list li:nth-child(3) {
+    margin-top: -5px;
+  }
+
+  .menu__list li:last-child {
+    margin-top: 319px;
+  }
+
+  /* .menu-open {
+    transform: translateX(-100%);
+    visibility: visible;
+  } */
+
+  .menu__profile {
+    text-decoration: none;
+    /* font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal; */
+  }
+}
+
+/* .hamburger {
+  display: none;
+  padding: 0;
+  width: 44px;
+  height: 44px;
+  border: none;
+  background: url(../../images/burger-menu.svg) no-repeat center/cover;
+  cursor: pointer;
+} */
+/* 768px - 1279px */
+/* @media screen and (max-width: 1279px) {
+  .hamburger {
+    display: block;
+  }
+} */
